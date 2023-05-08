@@ -1,6 +1,18 @@
 [
-    "HTML",
-    "CSS",
-    "Responsive Design",
-    "Javascript"
+    {
+        "name": "Html",
+        "completed": false
+    },
+    {
+        "name": "CSs",
+        "completed": false
+    },
+    {
+        "name": "Rensponsive Design",
+        "completed": false
+    },
+    {
+        "name": "Javascript",
+        "completed": false
+    }
 ]

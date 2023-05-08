@@ -11,6 +11,7 @@ createApp({
         .get(this.api_url)
         .then(response => {
             console.log(response);
+            this.tasks = response.data
         })
         .catch(error => {
             console.error(error.message);
