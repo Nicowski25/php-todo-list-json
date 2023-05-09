@@ -1,21 +1,43 @@
-const {createApp} = Vue
+const { createApp } = Vue
 createApp({
     data() {
         return {
             tasks: null,
-            api_url: 'getTasks.php'
+            api_url: 'getTasks.php',
+            new_task: ''
+        }
+    },
+    methods: {
+        add_task() {
+            console.log('adding new task');
+
+            const data = {
+                new_task: this.new_task
+            }
+
+            axios.post(
+                'storeTasks.php',
+                data,
+                {
+                    headers: { 'Content-Type': 'multipart/forma-data' }
+                }).then(response => {
+                    console.log(response);
+                    this.tasks = response.data
+                })
+                .catch(error => {
+                    console.error(error.message)
+                })
         }
     },
     mounted() {
         axios
-        .get(this.api_url)
-        .then(response => {
-            console.log(response);
-            this.tasks = response.data
-        })
-        .catch(error => {
-            console.error(error.message);
-        })
-
+            .get(this.api_url)
+            .then(response => {
+                console.log(response);
+                this.tasks = response.data
+            })
+            .catch(error => {
+                console.error(error.message);
+            })
     }
 }).mount('#app')
