@@ -2,18 +2,19 @@
 
 if (isset($_POST['new_task'])) {
 
-    $task = [
+    $newTask = [
         "name" => $_POST['new_task'],
         "completed" => false
     ];
 
     //read json file
     $task_string = file_get_contents('tasks.json');
+    
     //convert json_string in array w/json_decode
     $tasks_array = json_decode($task_string, true);
     
     //add new task to array
-    array_unshift($tasks_array, $task);
+    array_unshift($tasks_array, $newTask);
 
     // array convert to json
     $new_tasks_json_string = json_encode($tasks_array);

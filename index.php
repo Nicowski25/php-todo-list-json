@@ -20,10 +20,15 @@
             <ul class="ls-none">
 
                 <li v-for="task in tasks" :class="{done: task.completed}" class="list-item">
-                    <p class="p-0 m-0"> {{task.name}} </p>
-                    <button class="border border-0 bg-transparent">
-                        <i class="fa-solid fa-trash-can bin"></i>
-                    </button>
+                    <p class="p-0 m-0" @click="toggleTask(index)"> {{task.name}} </p>
+                    <div>
+                        <button class="border border-0 bg-transparent" @click="deleteTask(index)">
+                            <i class="fa-solid fa-check check"></i>
+                        </button>
+                        <button class="border border-0 bg-transparent" @click="deleteTask(index)">
+                            <i class="fa-solid fa-trash-can bin"></i>
+                        </button>
+                    </div>
                 </li>
 
             </ul>
@@ -31,7 +36,7 @@
         <div class="container border rounded border-primary w-50 bg-light p-0 my-2">
             <div class="input-group">
                 <input type="text" class="form-control" v-model="new_task" @keyup.enter="add_task" placeholder="Insert new task">
-                <button class="input-group-text" id="basic-addon2">Inserisci</button>
+                <button class="input-group-text" id="basic-addon2" @click="add_task">Inserisci</button>
             </div>
         </div>
     </div>

@@ -10,6 +10,14 @@
     border-radius: 0.4rem;
 }
 
+.check {
+    background-color: rgb(35, 202, 105);
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+    border: 0;
+    border-radius: 0.4rem;
+}
+
 .list-item {
     display: flex;
     justify-content: space-between;
