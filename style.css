@@ -1,3 +1,29 @@
 .done {
     text-decoration: line-through;
 }
+
+.bin {
+    background-color: rgb(202, 35, 35);
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+    border: 0;
+    border-radius: 0.4rem;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+.ls-none {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.add-task {
+    display: flex;
+    justify-content: space-between;
+}
