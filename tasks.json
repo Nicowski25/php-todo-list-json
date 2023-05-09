@@ -1,18 +1,1 @@
-[
-    {
-        "name": "Html",
-        "completed": false
-    },
-    {
-        "name": "CSs",
-        "completed": false
-    },
-    {
-        "name": "Rensponsive Design",
-        "completed": true
-    },
-    {
-        "name": "Javascript",
-        "completed": false
-    }
-]
+[{"name":"Vite","completed":false},{"name":"VueJS","completed":false},{"name":"Html","completed":false},{"name":"CSs","completed":false},{"name":"Rensponsive Design","completed":true},{"name":"Javascript","completed":false}]

@@ -15,11 +15,9 @@ createApp({
                 new_task: this.new_task
             }
 
-            axios.post(
-                'storeTasks.php',
-                data,
-                {
-                    headers: { 'Content-Type': 'multipart/forma-data' }
+            axios
+                .post('storeTasks.php',data, {
+                    headers: { 'Content-Type': 'multipart/form-data' }
                 }).then(response => {
                     console.log(response);
                     this.tasks = response.data
@@ -27,6 +25,7 @@ createApp({
                 .catch(error => {
                     console.error(error.message)
                 })
+            this.new_task = ''
         }
     },
     mounted() {

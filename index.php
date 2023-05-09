@@ -17,7 +17,7 @@
         <div class="container border rounded border-primary w-50 bg-light py-2">
             <ul>
                 <li v-for="task in tasks">
-                    <span  :class="{'done': task.completed}"></span>
+                    <span :class="{'done': task.completed}"></span>
                     {{task.name}}
                 </li>
             </ul>
